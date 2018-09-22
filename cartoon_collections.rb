@@ -8,15 +8,16 @@ def summon_captain_planet(calls)
   calls.map { |call| call.capitalize + "!" }
 end
 
-def long_planeteer_calls(array)
-  value = array.find{|i| i.length > 4}
-  value == nil ? false : true
+def long_planeteer_calls(calls)
+  output = calls.find{|call| call.length > 4}
+  output == nil ? false : true
 end
 
-def find_the_cheese(testable)
-  cheeses = %w(gouda cheddar camembert)
-
-  testable.find do |queso|
-    testable.include?(queso)
+def find_the_cheese(array)
+  
+  cheese_types = ["cheddar", "gouda", "camembert"]
+  cheese_types.each do |cheese|
+    return cheese if array.include?(cheese) == true
   end
+  nil
 end

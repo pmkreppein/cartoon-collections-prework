@@ -8,9 +8,9 @@ def summon_captain_planet(calls)
   calls.map { |call| call.capitalize + "!" }
 end
 
-def long_planeteer_calls(calls)
-  output = calls.any? { |call| call.length > 4 }
-  output == nil ? false :true
+def long_planteer_calls(array)
+  value = array.find{|i| i.length > 4}
+  value == nil ? false : true
 end
 
 def find_the_cheese(testable)
